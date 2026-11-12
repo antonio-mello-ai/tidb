@@ -15,7 +15,7 @@ runs:
   using: composite
   steps:
     - name: Set up bazelisk
-      uses: bazel-contrib/setup-bazel@0.16.0
+      uses: bazel-contrib/setup-bazel@43d7d5ceab59a307da44fc7585faa2a2fff4f88d # 0.16.0
       with:
         bazelisk-cache: true
         repository-cache: true
@@ -41,7 +41,7 @@ runs:
         echo "Repository Bazel flags may still enable read-only remote cache during the actual build command."
 
     - name: Set up Go
-      uses: actions/setup-go@v6
+      uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
       with:
         go-version: ${{ inputs.go-version }}
         cache: false
